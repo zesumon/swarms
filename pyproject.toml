@@ -65,7 +65,8 @@ Repository = "https://github.com/your-org/swarms"
 Issues = "https://github.com/your-org/swarms/issues"
 
 [tool.setuptools.packages.find]
-where = ["."]include = ["swarms*"]
+where = ["."]
+include = ["swarms*"]
 
 [tool.ruff]
 line-length = 88
@@ -84,4 +85,5 @@ ignore_missing_imports = true
 [tool.pytest.ini_options]
 asyncio_mode = "auto"
 testpaths = ["tests"]
-addopts = "--cov=swarms --cov-report=term-missing"
+# removed --cov flags so a plain `pytest` run doesn't require pytest-cov installed
+addopts = "-v"
