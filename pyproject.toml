@@ -87,4 +87,5 @@ asyncio_mode = "auto"
 testpaths = ["tests"]
 # removed --cov flags so a plain `pytest` run doesn't require pytest-cov installed
 # -p no:warnings keeps output clean while I'm just poking around locally
-addopts = "-v -p no:warnings"
+# -x stops on first failure — saves time when iterating locally
+addopts = "-v -p no:warnings -x"
